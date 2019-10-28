@@ -1,0 +1,43 @@
+﻿<Window x:Class="ControleDeLoja.WPF.Views.Clients.NewClient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControleDeLoja.WPF.Views.Clients"
+        mc:Ignorable="d"
+        Title="Novo Cliente" Height="400" Width="500" ResizeMode="NoResize"
+        Icon="/ControleDeLoja.WPF;component/Assets/assets_users.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Margin="0,2,0,0">
+            <Label Content="Nome" FontSize="18" FontWeight="Bold"/>
+            <Label Content="Sobrenome" FontSize="18" FontWeight="Bold"/>
+            <Label Content="Telefone" FontSize="18" FontWeight="Bold"/>
+            <Label Content="Endereço" FontSize="18" FontWeight="Bold"/>
+            <Label Content="CPF" FontSize="18" FontWeight="Bold"/>
+            <Label Content="RG" FontSize="18" FontWeight="Bold"/>
+            <Label Content="Renda" FontSize="18" FontWeight="Bold"/>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Margin="0,2,0,0">
+            <TextBox Name="tb_name" Width="300" FontSize="20" Margin="0,0,0,0"/>
+            <TextBox Name="tb_lastname" Width="300" FontSize="20" Margin="0,6,0,0"/>
+            <TextBox Name="tb_phone" FontSize="23" Width="300" Margin="0,6,0,0" />
+            <TextBox Name="tb_andress" FontSize="23" Width="300" Margin="0,6,0,0" />
+            <TextBox Name="tb_cpf" Width="300" FontSize="20" Margin="0,6,0,0" />
+            <TextBox Name="tb_rg" Width="300" FontSize="20" Margin="0,6,0,0" />
+            <TextBox Name="tb_renda" Width="300" FontSize="20" Margin="0,6,0,0"/>
+        </StackPanel>
+        
+        <Button Click="BtnSave_Click" Name="BtnSave" Grid.Row="1" Grid.ColumnSpan="2" Margin="8" Content="Salvar"
+            HorizontalAlignment="Center" FontSize="18" FontFamily="SEGOE UI" Padding="12"/>
+    </Grid>
+</Window>

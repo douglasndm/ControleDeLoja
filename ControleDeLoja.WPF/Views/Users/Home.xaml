@@ -1,0 +1,69 @@
+﻿<Page x:Class="ControleDeLoja.WPF.Views.Users.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControleDeLoja.WPF.Views.Users"
+        xmlns:models="clr-namespace:ControleDeLoja.Models;assembly=ControleDeLoja"
+        mc:Ignorable="d">
+
+    <Page.Resources>
+        <Style TargetType="Label" x:Key="labelListView">
+            <Setter Property="FontSize" Value="22" />
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.ColumnSpan="2">
+            <MenuItem Header="Novo">
+                <MenuItem Header="Novo operador"/>
+                <MenuItem Header="Novo administrador"/>
+            </MenuItem>
+            <MenuItem IsEnabled="false" Header="Editar"/>
+            <MenuItem IsEnabled="false" Header="Apagar operador"/>
+        </Menu>
+
+        <Grid Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <ListView Name="listViewUsers">
+                
+                <ListView.View>
+                    <GridView AllowsColumnReorder="False">
+                        <GridViewColumn Header="NOME" DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="SOBRENOME" DisplayMemberBinding="{Binding LastName}"/>
+                    </GridView>
+                </ListView.View>
+                
+                <ItemsControl.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <EventSetter Event="PreviewMouseLeftButtonDown" Handler="ListViewItem_MouseLeftButtonDown" />
+                    </Style>
+                    
+                </ItemsControl.ItemContainerStyle>
+                
+            </ListView>
+
+            <StackPanel Name="StackPanelDetail" Grid.Column="1" Background="#FFF7F7F7">
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Name="DetailsName" Content="NOME" FontSize="20" FontFamily="Segoe UI Semilight" FontWeight="Bold"/>
+                    <Label Name="DetailsLastName" Content="SOBRENOME" FontSize="20" FontFamily="Segoe UI Semilight" FontWeight="Bold"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Name="DetailsIsAdmin" Content="Operador" FontSize="11" />
+                </StackPanel>
+  
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Page>

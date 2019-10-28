@@ -1,0 +1,34 @@
+﻿<Window x:Class="ControleDeLoja.WPF.Views.Caixa.FinalizarCompra"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControleDeLoja.WPF.Views.Caixa"
+        mc:Ignorable="d"
+        Title="Finalizar Compra" 
+        Height="220" 
+        Width="500"
+        ResizeMode="NoResize">
+    <StackPanel VerticalAlignment="Center">
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+            <TextBlock FontSize="20" Text="CPF do cliente: "/>
+            <TextBox FontSize="22" Name="tb_clientCPf"  Text="" Width="200" />
+            <Button Content="Procurar cliente" Margin="5,0,0,0" Name="BtnFindClient" Click="BtnFindClient_Click" />
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center">
+            <TextBlock Name="ClientName" FontSize="22" />
+        </StackPanel>
+        
+        <StackPanel Name="Detalhes" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock FontSize="22" Text="Total: R$" />
+            <TextBlock FontSize="22" Text="46" Name="Tb_Total" />
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center" Margin="10">
+            <Button Content="Finalizar compra" Padding="15" Name="btnFinalizarCompra" Click="BtnFinalizarCompra_Click" />
+        </StackPanel>
+        
+    </StackPanel>
+</Window>

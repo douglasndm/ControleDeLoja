@@ -1,0 +1,38 @@
+﻿<Window x:Class="ControleDeLoja.WPF.Views.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControleDeLoja.WPF.Views"
+        mc:Ignorable="d"
+        Title="Login" Height="250" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Icon="/ControleDeLoja.WPF;component/Assets/assets_shopping_bag_red.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        
+        <Image Source="/ControleDeLoja.WPF;component/Assets/assets_shopping_bag_red.png"/>
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Margin="10">
+                <TextBlock Text="E-Mail" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+                <TextBlock Text="Senha" FontWeight="Bold" FontSize="16"/>
+            </StackPanel>
+            <StackPanel Margin="10">
+                <TextBox Name="tb_email" FontWeight="Bold" FontSize="16" Width="350" Margin="0,0,0,10"/>
+                <PasswordBox Name="pb_password" FontWeight="Bold" FontSize="16" Width="350"/>
+            </StackPanel>
+        </StackPanel>
+        
+        <Button 
+            Click="BtnLogin_Click"
+            Grid.Row="2" 
+            Content="Login" 
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center" 
+            Padding="15,10"/>
+    </Grid>
+</Window>

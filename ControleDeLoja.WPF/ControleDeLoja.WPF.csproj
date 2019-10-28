@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4EBF196C-8DF2-4859-9037-C1D9B66A1342}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ControleDeLoja.WPF</RootNamespace>
+    <AssemblyName>ControleDeLoja.WPF</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.109.2\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.109.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.109.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\About\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Clients\ComprasCliente.xaml.cs">
+      <DependentUpon>ComprasCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Relatorios\Vendas.xaml.cs">
+      <DependentUpon>Vendas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Users\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Caixa\Caixa.xaml.cs">
+      <DependentUpon>Caixa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Caixa\FinalizarCompra.xaml.cs">
+      <DependentUpon>FinalizarCompra.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Clients\Clients.xaml.cs">
+      <DependentUpon>Clients.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Clients\EditClient.xaml.cs">
+      <DependentUpon>EditClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Clients\NewClient.xaml.cs">
+      <DependentUpon>NewClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Estoque\EditItem.xaml.cs">
+      <DependentUpon>EditItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Estoque\Estoque.xaml.cs">
+      <DependentUpon>Estoque.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Estoque\NewProduct.xaml.cs">
+      <DependentUpon>NewProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\About\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Clients\ComprasCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Relatorios\Vendas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Users\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Caixa\Caixa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Caixa\FinalizarCompra.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Clients\Clients.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Clients\EditClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Clients\NewClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Estoque\EditItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Estoque\Estoque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Estoque\NewProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\assets_currency_dollar.png" />
+    <Resource Include="Assets\assets_estoque.png" />
+    <Resource Include="Assets\assets_shopping_bag_red.png" />
+    <Resource Include="Assets\assets_users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControleDeLoja\ControleDeLoja.csproj">
+      <Project>{afabda73-10e4-49da-b7a8-5baf5d0d57b1}</Project>
+      <Name>ControleDeLoja</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\admin_min.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\About\TextFile1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\png\001-atm.png" />
+    <Resource Include="Assets\png\002-barcode.png" />
+    <Resource Include="Assets\png\003-award.png" />
+    <Resource Include="Assets\png\004-business.png" />
+    <Resource Include="Assets\png\005-calculating.png" />
+    <Resource Include="Assets\png\006-card machine.png" />
+    <Resource Include="Assets\png\007-card.png" />
+    <Resource Include="Assets\png\008-business and finance.png" />
+    <Resource Include="Assets\png\009-close.png" />
+    <Resource Include="Assets\png\010-business and finance.png" />
+    <Resource Include="Assets\png\011-beauty.png" />
+    <Resource Include="Assets\png\012-business and finance.png" />
+    <Resource Include="Assets\png\013-business and finance.png" />
+    <Resource Include="Assets\png\014-automobile.png" />
+    <Resource Include="Assets\png\015-cart.png" />
+    <Resource Include="Assets\png\016-badge.png" />
+    <Resource Include="Assets\png\017-broswer.png" />
+    <Resource Include="Assets\png\018-box.png" />
+    <Resource Include="Assets\png\019-bread.png" />
+    <Resource Include="Assets\png\020-fashion.png" />
+    <Resource Include="Assets\png\021-commerce and shopping.png" />
+    <Resource Include="Assets\png\022-barcode.png" />
+    <Resource Include="Assets\png\023-cellphone.png" />
+    <Resource Include="Assets\png\024-business and finance.png" />
+    <Resource Include="Assets\png\025-broswer.png" />
+    <Resource Include="Assets\png\026-business.png" />
+    <Resource Include="Assets\png\027-box.png" />
+    <Resource Include="Assets\png\028-box.png" />
+    <Resource Include="Assets\png\029-bag.png" />
+    <Resource Include="Assets\png\030-bills.png" />
+    <Resource Include="Assets\png\031-business and finance.png" />
+    <Resource Include="Assets\png\032-bag.png" />
+    <Resource Include="Assets\png\033-commerce and shopping.png" />
+    <Resource Include="Assets\png\034-box.png" />
+    <Resource Include="Assets\png\035-barcode.png" />
+    <Resource Include="Assets\png\036-commerce and shopping.png" />
+    <Resource Include="Assets\png\037-bottles.png" />
+    <Resource Include="Assets\png\038-check.png" />
+    <Resource Include="Assets\png\039-boot.png" />
+    <Resource Include="Assets\png\040-buildings.png" />
+    <Resource Include="Assets\png\041-business and finance.png" />
+    <Resource Include="Assets\png\042-bag.png" />
+    <Resource Include="Assets\png\043-business and finance.png" />
+    <Resource Include="Assets\png\044-bill.png" />
+    <Resource Include="Assets\png\045-commerce and shopping.png" />
+    <Resource Include="Assets\png\046-badge.png" />
+    <Resource Include="Assets\png\047-chronometer.png" />
+    <Resource Include="Assets\png\048-business and finance.png" />
+    <Resource Include="Assets\png\049-billfold.png" />
+    <Resource Include="Assets\png\050-commerce and shopping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\png\001-book.png" />
+    <Resource Include="Assets\png\002-tools.png" />
+    <Resource Include="Assets\png\003-stopclock.png" />
+    <Resource Include="Assets\png\004-smartphone.png" />
+    <Resource Include="Assets\png\005-laptop.png" />
+    <Resource Include="Assets\png\006-support.png" />
+    <Resource Include="Assets\png\007-pin.png" />
+    <Resource Include="Assets\png\008-help.png" />
+    <Resource Include="Assets\png\009-headset-1.png" />
+    <Resource Include="Assets\png\010-headset.png" />
+    <Resource Include="Assets\png\011-customer-support.png" />
+    <Resource Include="Assets\png\012-chat-1.png" />
+    <Resource Include="Assets\png\013-chat.png" />
+    <Resource Include="Assets\png\014-phone-call.png" />
+    <Resource Include="Assets\png\015-24-hours-1.png" />
+    <Resource Include="Assets\png\016-24-hours.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>
